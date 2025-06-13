@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' apply true
+}
+
+ext {
+    kafkaSchemaRegistry = '7.5.1'
+    dotenvVersion = '3.0.0'
+}
+
+dependencies {
+    implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "io.confluent:kafka-schema-registry-client:$kafkaSchemaRegistry"
+    implementation "io.confluent:kafka-json-serializer:$kafkaSchemaRegistry"
+    implementation "io.confluent:kafka-json-schema-serializer:$kafkaSchemaRegistry"
+    implementation "io.github.cdimascio:dotenv-java:$dotenvVersion"
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+    testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.testcontainers:kafka'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+tasks.named('bootBuildImage') {
+    builder = 'paketobuildpacks/builder-jammy-base:latest'
+}
