@@ -1,0 +1,22 @@
+id,name,category,amount,quantity,dateCreated
+6c36d339-8e8b-4de6-8286-ad4a76e14042,onion,food,10.2,6,2025-06-08 14:30:45
+8a42f1c7-3d21-4e89-b5f4-1c3e8a9b7d25,potato,food,8.5,10,2025-06-08 15:12:33
+e5c9d7b2-1a4f-4c76-9e3d-0b8a7c6d5e4f,tomato,food,12.8,5,2025-06-08 16:45:21
+3b6a8c9d-2e1f-4d57-8c3b-9a7e5f4d2c1a,apple,food,15.3,8,2025-06-08 09:30:15
+7d4e3f2a-1b5c-4d6e-8f9a-3c2b1a4d5e6f,banana,food,9.1,12,2025-06-08 11:22:47
+2f8e7d6c-5b4a-3c2d-1e9f-8a7b6c5d4e3f,milk,dairy,22.4,3,2025-06-08 13:18:56
+1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p,cheese,dairy,18.7,4,2025-06-08 10:05:32
+9e8d7c6b-5a4f-3e2d-1c0b-9a8b7c6d5e4f,yogurt,dairy,14.2,7,2025-06-08 14:55:44
+4c3d2e1f-5a6b-7c8d-9e0f-1a2b3c4d5e6f,beer,drinks,30.5,2,2025-06-08 19:30:00
+5d6e7f8a-9b0c-1d2e-3f4a-5b6c7d8e9f0a,wine,drinks,45.2,1,2025-06-08 20:15:22
+6f7e8d9c-0b1a-2c3d-4e5f-6a7b8c9d0e1f,juice,drinks,12.3,5,2025-06-08 12:10:05
+3a4b5c6d-7e8f-9g0h-1i2j-3k4l5m6n7o8p,water,drinks,5.0,15,2025-06-08 08:45:18
+2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e,bread,bakery,7.8,4,2025-06-08 07:30:29
+1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f,cake,bakery,25.6,2,2025-06-08 17:45:33
+4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a,cookies,bakery,9.9,6,2025-06-08 16:20:11
+5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b,chocolate,sweets,12.5,8,2025-06-08 15:10:42
+6a7b8c9d-0e1f-2a3b-4c5d-6e7f8a9b0c1d,candy,sweets,5.3,20,2025-06-08 10:30:15
+7b8c9d0a-1e2f-3a4b-5c6d-7e8f9a0b1c2d,rice,grocery,18.2,3,2025-06-08 11:45:27
+8c9d0a1b-2e3f-4a5b-6c7d-8e9f0a1b2c3d,pasta,grocery,9.7,5,2025-06-08 13:30:19
+9d0a1b2c-3d4e-5f6a-7b8c-9d0e1f2a3b4c,oil,grocery,22.1,2,2025-06-08 14:15:38
+0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d,salt,grocery,3.5,10,2025-06-08 09:20:44
