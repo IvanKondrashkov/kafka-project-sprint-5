@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' apply true
+}
+
+ext {
+    kafkaSchemaRegistry = '7.5.1'
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation "io.confluent:kafka-json-serializer:$kafkaSchemaRegistry"
+    implementation "io.confluent:kafka-schema-registry-client:$kafkaSchemaRegistry"
+    implementation "io.confluent:kafka-json-schema-serializer:$kafkaSchemaRegistry"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.named('bootBuildImage') {
+    builder = 'paketobuildpacks/builder-jammy-base:latest'
+}
