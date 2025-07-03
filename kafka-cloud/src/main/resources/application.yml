@@ -1,0 +1,47 @@
+server:
+  port: 8080
+
+spring:
+  kafka:
+    bootstrap-servers: rc1a-2om888iagveq89e7.mdb.yandexcloud.net:9091,rc1a-f0magmhmcnv098vf.mdb.yandexcloud.net:9091,rc1a-qgsaqtj816v317p3.mdb.yandexcloud.net:9091
+
+    # Producer settings
+    producer:
+      acks: all
+      retries: 3
+      properties:
+        min.insync.replicas: 3
+        security.protocol: SASL_SSL
+        sasl.mechanism: SCRAM-SHA-512
+        sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="kafka-client" password="kafka-client";
+
+    # Consumer settings
+    consumer:
+      group-id: orders-id
+      enable-auto-commit: false
+      auto-offset-reset: earliest
+      properties:
+        session.timeout.ms: 30000
+        heartbeat.interval.ms: 10000
+        security.protocol: SASL_SSL
+        sasl.mechanism: SCRAM-SHA-512
+        sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="kafka-client" password="kafka-client";
+
+    # SSL settings
+    ssl:
+      trust-store-location: file:opt/kafka/ssl/ssl
+      trust-store-password: password
+
+    # Schema Registry settings
+    properties:
+      schema.registry.url: https://rc1a-2om888iagveq89e7.mdb.yandexcloud.net:443
+      schema.registry.basic.auth.user.info: kafka-client:kafka-client
+      schema.registry.ssl.truststore.location: /opt/kafka/ssl/ssl
+      schema.registry.ssl.truststore.password: password
+
+    # Admin client settings
+    admin:
+      properties:
+        security.protocol: SASL_SSL
+        sasl.mechanism: SCRAM-SHA-512
+        sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="kafka-client" password="kafka-client";
